@@ -1,0 +1,41 @@
+{
+  "name": "@vamsiyvs/package-recipe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest && make-coverage-badge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vamsiyvs/package-recipe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vamsiyvs/package-recipe/issues"
+  },
+  "homepage": "https://github.com/vamsiyvs/package-recipe#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "make-coverage-badge": "^1.2.0"
+  },
+  "jest": {
+    "verbose": true,
+    "coverageReporters": [
+      "json-summary",
+      [
+        "text",
+        {
+          "file": "coverage.txt",
+          "path": "./coverage"
+        }
+      ],
+      "lcov"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./src/**"
+    ]
+  }
+}
